@@ -1,0 +1,85 @@
+{
+  "name": "@aayworks/utils",
+  "version": "0.0.1",
+  "description": "Aayworks Common Utilities",
+  "main": "index.ts",
+  "module": "dist/index.es.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "Ankur Daharwal <ankur.daharwal@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aayworks/aayworks.git",
+    "directory": "packages/utils"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts src",
+    "prebuild": "rimraf dist",
+    "build": "tsdx build",
+    "start": "tsdx watch",
+    "test": "jest --coverage --updateSnapshot",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "npm run lint && npm run test -- --no-cache",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "commit": "git-cz",
+    "precommit": "lint-staged",
+    "release": "standard-version"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.0.1",
+    "@types/lodash.camelcase": "^4.3.6",
+    "@types/node": "^14.14.19",
+    "standard-version": "^9.1.0"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "loglevel": "^1.7.1",
+    "react": "^16.14.0"
+  },
+  "jest": {
+    "coverageDirectory": "<rootDir>/coverage",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.spec.(ts|js)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  }
+}

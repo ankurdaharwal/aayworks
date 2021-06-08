@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "lib": ["dom", "es2018", "esnext.asynciterable", "esnext.array"],
+    "module": "esnext",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist/lib",
+    "rootDir": "src",
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": "./src"
+  },
+  "include": ["src"]
+}

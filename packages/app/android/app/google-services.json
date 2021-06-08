@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "798069445968",
+    "firebase_url": "https://aayworksmvp.firebaseio.com",
+    "project_id": "aayworksmvp",
+    "storage_bucket": "aayworksmvp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798069445968:android:2fbccec107521c76fa8855",
+        "android_client_info": {
+          "package_name": "com.aayworks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798069445968-s6v3g3o5c46jasboslpto37ig62p4lkc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aayworks",
+            "certificate_hash": "7b58554540ace0775aa6d34b061f4c4c109b4165"
+          }
+        },
+        {
+          "client_id": "798069445968-9jtg48glgjf2d2dsu2lls4hfktrcgl4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGxR0ZpndehUaqkAc6qq8dQfdE_mqhuh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798069445968-9jtg48glgjf2d2dsu2lls4hfktrcgl4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

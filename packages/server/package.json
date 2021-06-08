@@ -1,0 +1,96 @@
+{
+  "name": "@aayworks/server",
+  "version": "0.0.1",
+  "description": "AayWorks Services",
+  "scripts": {
+    "prepare": "yarn run build",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prebuild": "rimraf dist",
+    "postbuild": "cpy ssl/** dist/ssl && cpy newrelic.js dist",
+    "mongodb": "mongod --dbpath ~/data/db",
+    "dev": "moleculer-runner --env --hot --repl --config dist/moleculer.config.js",
+    "mongodb": "mongod --dbpath ~/data/db",
+    "dev:inspect": "NODE_OPTIONS=--inspect DEBUG=mssql:tedi moleculer-runner --env --hot --repl --config dist/moleculer.config.js",
+    "dev:debug": "NODE_OPTIONS=--inspect-brk moleculer-runner --env --hot --repl --config dist/moleculer.config.js"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "Ankur Daharwal <ankur.daharwal@gmail.com>",
+  "peerDependencies": {
+    "@aayworks/utils": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/async-retry": "^1.4.2",
+    "@types/mongodb": "^3.6.3",
+    "@types/node": "^14.14.19",
+    "cpy": "^8.1.1",
+    "cpy-cli": "^3.1.1",
+    "jest-html-reporter": "^3.3.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "async-retry": "^1.3.1",
+    "dotenv": "^8.2.0",
+    "ethereumjs-util": "^7.0.8",
+    "graphql": "^15.4.0",
+    "js-sha256": "^0.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "ky": "^0.25.1",
+    "ky-universal": "^0.8.2",
+    "lodash": "^4.17.20",
+    "moleculer": "^0.14.12",
+    "moleculer-apollo-server": "^0.3.3",
+    "moleculer-repl": "^0.6.4",
+    "moleculer-web": "^0.9.1",
+    "mongodb": "^3.6.3",
+    "nats": "^1.4.12",
+    "newrelic": "^7.0.2",
+    "node-fetch": "^2.6.1",
+    "promise.allsettled": "^1.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "outputPath": "./public/test-report.html"
+        }
+      ]
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.spec.(ts|js)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/jest.setup.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  }
+}

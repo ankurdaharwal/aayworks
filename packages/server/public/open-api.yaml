@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: AayWorks Server API
+  description: |
+    AayWorks Server API
+
+    Currect available services:
+
+    - Info
+
+    - User Profile Registration
+
+    - User Profile Update
+
+  contact:
+    email: contact@aayworks.com
+  version: 0.0.1
+servers:
+  - url: "/server"
+    description: AayWorks Services API
+paths:
+  "/info":
+    get:
+      tags:
+        - information
+      summary: General information about AayWorks
+      description: |
+
+      operationId: info
+      responses:
+        "200":
+          description: A json object with AayWorks server general information.
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Info"
+components:
+  schemas:
+    Info:
+      properties:
+        name:
+          type: string
+        website:
+          type: string
+        host:
+          type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      name: X-API-KEY
+      in: header

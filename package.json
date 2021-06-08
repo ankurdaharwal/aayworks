@@ -1,0 +1,11 @@
+{
+  "name": "aayworks",
+  "version": "0.0.1",
+  "description": "AayWorks Monorepo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankur Daharwal",
+  "license": "MIT"
+}

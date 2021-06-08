@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "pretty": true,
+    "types": ["node"],
+    "sourceMap": true,
+    "target": "es2017",
+    "baseUrl": "./",
+    "outDir": "dist/",
+    "rootDir": "."
+  },
+  "exclude": ["node_modules", "test", "dist"]
+}
