@@ -11,7 +11,7 @@
 
 ## Architecture
 
-<img alt="AayWorks MonoRepo Architecture" src="https://github.com/aayworks/aayworks/blob/master/architecture.png" />
+<img alt="AayWorks MonoRepo Architecture" src="https://github.com/ankurdaharwal/aayworks/blob/master/architecture.png" />
 
 ## Install
 
